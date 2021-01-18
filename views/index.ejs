@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - an app for learning full-stack javascript</title>
+    <link rel="stylesheet" href="/stylesheets/todo.css" />
+</head>
+<body>
+    <form action="/" method="POST">
+        <section class="todoapp">
+            <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo" placeholder="What needs to be done?" autofocus />
+                <button class="add-todo">+</button>
+            </header>
+            <section class="main">
+                <ul class="todo-list">
+                    <li>
+                        <div class="view">
+                            <input class="toggle" type="checkbox" />
+                            <label>Test</label>
+                            <button class="destroy"></label>
+                        </div>
+                    </li>
+                </ul>
+                <footer class="footer">
+                    <span class="todo-count">1 item left</span>
+                </footer>
+            </section>
+        </section>
+    </form>
+    <script type="javscript" src="/js/todo.js"></script>
+</body>
+</html>

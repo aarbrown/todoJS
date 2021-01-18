@@ -1,1 +1,10 @@
 node_modules
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
+
+# Windows shortcuts
+*.lnk

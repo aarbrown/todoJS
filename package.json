@@ -4,7 +4,7 @@
   "description": "A simple full stack application to be used for learning purposes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -r esm index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/aarbrown/todoJS/issues"
   },
-  "homepage": "https://github.com/aarbrown/todoJS#readme"
+  "homepage": "https://github.com/aarbrown/todoJS#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
