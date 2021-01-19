@@ -7,25 +7,29 @@
     <link rel="stylesheet" href="/stylesheets/todo.css" />
 </head>
 <body>
-    <form action="/" method="POST">
+    
         <section class="todoapp">
             <header class="header">
-                <h1>todos</h1>
-                <input class="new-todo" placeholder="What needs to be done?" autofocus />
-                <button class="add-todo">+</button>
+                <form action="/" method="POST">
+                    <h1>todos</h1>
+                    <input class="new-todo" placeholder="What needs to be done?" autofocus />
+                    <button class="add-todo">+</button>
+                </form>
             </header>
             <section class="main">
                 <ul class="todo-list">
-                    <li>
-                        <div class="view">
-                            <input class="toggle" type="checkbox" />
-                            <label>Test</label>
-                            <button class="destroy"></label>
-                        </div>
-                    </li>
+                    <% todos.forEach( task => { %>
+                        <li <%if (task.status === "completed") { %>class="completed" <% } %>>
+                            <div class="view">
+                                <input class="toggle" type="checkbox" <%if (task.status === "completed") { %>checked <% } %>/>
+                                <label><%= task.body %></label>
+                                <button class="destroy"></button>
+                            </div>
+                        </li>
+                    <% }) %>
                 </ul>
                 <footer class="footer">
-                    <span class="todo-count">1 item left</span>
+                    <span class="todo-count"><%= remaining %> item<%if (remaining > 1) { %>s<% }%> left</span>
                 </footer>
             </section>
         </section>
